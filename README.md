@@ -1,4 +1,4 @@
-# *** Hexlet password generator and strength check utility ***
+## *** Hexlet password generator and strength check utility ***
 
 ### Description
 
