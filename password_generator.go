@@ -3,22 +3,28 @@ package code
 const lowercase = "abcdefghijklmnopqrstuvwxyz"
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const digits = "0123456789"
+const special = "!@#$%^&*"
 
-func GeneratePassword(length int, useUppercase, useDigits bool) string {
-	alphabet := lowercase
-	if useUppercase && !useDigits {
-		alphabet += uppercase
-	}
-	if !useUppercase && useDigits {
-		alphabet += digits
-	}
-	if useUppercase && useDigits {
-		alphabet += uppercase
-		alphabet += digits
-	}
+func NextRandom(number int) int {
+	return (16807 * number) % 2147483647
+}
+
+func GeneratePassword(length, seed int, useUppercase, useDigits, useSpecial bool) string {
+	current := seed
 	result := ""
-	for i := range length {
-		index := i % len(alphabet)
+	alphabet := lowercase
+	if useSpecial {
+		alphabet += uppercase
+	}
+	if useDigits {
+		alphabet += digits
+	}
+	if useSpecial {
+		alphabet += special
+	}
+	for range length {
+		current = NextRandom(current)
+		index := current % len(alphabet)
 		result = result + string(alphabet[index])
 	}
 	return result
