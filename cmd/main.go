@@ -10,7 +10,7 @@ import (
 func main() {
 	var answer string
 	var password string
-	fmt.Println("** Hexlet password generator and strength check ***")
+	fmt.Println("*** Hexlet password generator and strength check ***")
 	fmt.Println("Я могу для Вас сгенерировать надеждный пароль!\nИли проверить Ваш пароль на надёжность.")
 	fmt.Print("Для генерации введите - 'gen'\nДля проверки введите - 'check'\nВведите ответ: ")
 	fmt.Scan(&answer)
