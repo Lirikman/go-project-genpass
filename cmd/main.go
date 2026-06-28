@@ -7,9 +7,10 @@ import (
 )
 
 func main() {
-	fmt.Println(code.CheckPassword("abc"))
-	fmt.Println(code.CheckPassword("abcdefgh"))
-	fmt.Println(code.CheckPassword("abcdef1234"))
-	fmt.Println(code.CheckPassword("Abcdef1234"))
-	fmt.Println(code.CheckPassword("Abcdef123!"))
+	var password string
+	fmt.Println("** Hexlet password generator ***")
+	fmt.Print("Для оценки надежности, введите ваш пароль:\n")
+	fmt.Scan(&password)
+	fmt.Println("--- Результаты проверки ---")
+	fmt.Println(code.CheckPassword(password))
 }
