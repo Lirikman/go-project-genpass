@@ -2,17 +2,17 @@
 
 ### Description
 
-A utility for generating strong passwords and checking password strength.
+A utility for generating strong passwords and checking password strength
 
-Passwords are generated with a minimum length of 8 characters, using lowercase and uppercase Latin characters, as well as numeric and special characters.
+Passwords are generated with a minimum length of 8 characters, using lowercase and uppercase Latin characters, as well as numeric and special characters
 
 Password strength is checked according to the following criteria:
 
-* password length;
-* presence of a lowercase Latin letter;
-* presence of an UPPERCASE Latin letter;
-* presence of a number;
-* presence of a special character. 
+* password length
+* presence of a lowercase Latin letter
+* presence of an UPPERCASE Latin letter
+* presence of a number
+* presence of a special character
 
 ### Requirements
 
