@@ -13,7 +13,7 @@ func GeneratePassword(length, seed int, useUppercase, useDigits, useSpecial bool
 	current := seed
 	result := ""
 	alphabet := lowercase
-	if useSpecial {
+	if useUppercase {
 		alphabet += uppercase
 	}
 	if useDigits {
